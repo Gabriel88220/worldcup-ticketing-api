@@ -2,8 +2,12 @@ import { Hono } from 'hono'
 
 export const app = new Hono()
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+app.get("/", (c) => {
+  return c.json({
+    success: true,
+    message: "World Cup Ticketing API"
+  });
+});
+
 
 export default app
